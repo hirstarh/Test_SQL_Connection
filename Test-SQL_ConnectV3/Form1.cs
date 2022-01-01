@@ -30,7 +30,7 @@ namespace Test_SQL_ConnectV3
 
             try
             {
-                /* Open up connection */
+                /* Open up connection to the database*/
                 cnn.Open();
                 MessageBox.Show("Congratulations you have successfully connected to the SQL-SE1 server", "Connection Made", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cnn.Close();
