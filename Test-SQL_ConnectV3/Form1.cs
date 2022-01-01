@@ -24,12 +24,13 @@ namespace Test_SQL_ConnectV3
             SqlConnection cnn;
 
             /* SQL Server IP address 45.76.138.73 */
-            connectionString = @"Data Source=agem-se1.agem-bisenhs.org.uk;Initial Catalog =Master;User ID=AHirst;Password=Coniston125";
+            connectionString = @"Data Source=agem-se1.agem-bisenhs.org.uk;Database=Master;User ID=AHirst;Password=Coniston125";
 
             cnn = new SqlConnection(connectionString);
 
             try
             {
+                /* Open up connection */
                 cnn.Open();
                 MessageBox.Show("Congratulations you have successfully connected to the SQL-SE1 server", "Connection Made", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cnn.Close();
