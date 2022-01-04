@@ -35,8 +35,12 @@ namespace Test_SQL_ConnectV3
 
                 connectionString = @"Data Source=agem-se1.agem-bisenhs.org.uk;Initial Catalog =AdventureWorks2019;User ID=AHirst;Password=Coniston125";
                 sql = " Select TOP (20) AddressID, AddressLine1, City, StateProvinceID, PostalCode From [AdventureWorks2019].[Person].[Address] ";
+                sql_Insert = "Insert into [AdventureWorks2019].[Person].[Address] (AddressLine1, City, StateProvinceID, PostalCode) values('950 Mill Lane', 'Steyning', 45, 'BN44 3LN') ";
                 cnn = new SqlConnection(connectionString);
                 cnn.Open();
+                adapter.InsertCommand = new SqlCommand(sql_Insert, cnn);
+                adapter.InsertCommand.ExecuteNonQuery();
+
                 command = new SqlCommand(sql, cnn);
                 dataReader = command.ExecuteReader();
 
