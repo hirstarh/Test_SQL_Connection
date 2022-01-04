@@ -32,34 +32,25 @@ namespace Test_SQL_ConnectV3
             /* SQL Server IP address 45.76.138.73 */
             try
             {
-            /* Set up strings with ConnectionString and SQL commands */
-            connectionString = @"Data Source=agem-se1.agem-bisenhs.org.uk;Initial Catalog =AdventureWorks2019;User ID=AHirst;Password=Coniston125";
-            sql = "Select TOP (10) AddressID, AddressLine1, City, StateProvinceID, PostalCode from [AdventureWorks2019].[Person].[Address] ";
-            sql_Insert = "Insert into [AdventureWorks2019].[Person].[Address] (AddressLine1, City, StateProvinceID, PostalCode) values('200 St Georges Place', 'Steyning', 51,  'BN44 3LN')"; 
-                  
-            /* Connect to database and execute the insert and select command */   
-            cnn = new SqlConnection(connectionString);
-            cnn.Open();
-            command = new SqlCommand(sql, cnn);
-            adapter.InsertCommand = new SqlCommand(sql_Insert, cnn);
-            adapter.InsertCommand.ExecuteNonQuery();
 
-                
-                MessageBox.Show("Congratulations you have successfully connected to the SQL-SE1 server", "Connection Made", MessageBoxButtons.OK, MessageBoxIcon.Information); 
-                
-                /* Read back data from AdventureWorks2019 database Table */
+                connectionString = @"Data Source=agem-se1.agem-bisenhs.org.uk;Initial Catalog =AdventureWorks2019;User ID=AHirst;Password=Coniston125";
+                sql = " Select TOP (20) AddressID, AddressLine1, City, StateProvinceID, PostalCode From [AdventureWorks2019].[Person].[Address] ";
+                cnn = new SqlConnection(connectionString);
+                cnn.Open();
+                command = new SqlCommand(sql, cnn);
                 dataReader = command.ExecuteReader();
-                    
-                    while (dataReader.Read())
+
+                while (dataReader.Read())
                 {
-                    Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3) + " - " + dataReader.GetValue(4) + " \n ";
-                
+                    Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " _ " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3) + " - " + dataReader.GetValue(4);
                 }
                 MessageBox.Show(Output);
-                /* Close connections to SQL server */
+                
+                MessageBox.Show("Congratulations you have successfully connected to the SQL-SE1 server", "Connection Made", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cnn.Close();
                 dataReader.Close();
                 command.Dispose();
-                cnn.Close();
+                
             }
             catch (SqlException sqlEx)
             {
