@@ -46,7 +46,7 @@ namespace Test_SQL_ConnectV3
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(49, 477);
+            this.button1.Location = new System.Drawing.Point(49, 610);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(284, 64);
             this.button1.TabIndex = 0;
@@ -57,7 +57,7 @@ namespace Test_SQL_ConnectV3
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 38);
+            this.label1.Location = new System.Drawing.Point(49, 222);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 25);
             this.label1.TabIndex = 1;
@@ -65,7 +65,7 @@ namespace Test_SQL_ConnectV3
             // 
             // txtAddressID
             // 
-            this.txtAddressID.Location = new System.Drawing.Point(204, 38);
+            this.txtAddressID.Location = new System.Drawing.Point(204, 216);
             this.txtAddressID.Name = "txtAddressID";
             this.txtAddressID.Size = new System.Drawing.Size(212, 31);
             this.txtAddressID.TabIndex = 2;
@@ -73,7 +73,7 @@ namespace Test_SQL_ConnectV3
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 97);
+            this.label2.Location = new System.Drawing.Point(49, 283);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 25);
             this.label2.TabIndex = 3;
@@ -81,7 +81,7 @@ namespace Test_SQL_ConnectV3
             // 
             // txtAddressLine1
             // 
-            this.txtAddressLine1.Location = new System.Drawing.Point(204, 97);
+            this.txtAddressLine1.Location = new System.Drawing.Point(204, 277);
             this.txtAddressLine1.Name = "txtAddressLine1";
             this.txtAddressLine1.Size = new System.Drawing.Size(212, 31);
             this.txtAddressLine1.TabIndex = 4;
@@ -89,7 +89,7 @@ namespace Test_SQL_ConnectV3
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 159);
+            this.label3.Location = new System.Drawing.Point(49, 338);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 25);
             this.label3.TabIndex = 5;
@@ -97,7 +97,7 @@ namespace Test_SQL_ConnectV3
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(204, 159);
+            this.textBox1.Location = new System.Drawing.Point(204, 332);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(212, 31);
             this.textBox1.TabIndex = 6;
@@ -105,7 +105,7 @@ namespace Test_SQL_ConnectV3
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 219);
+            this.label4.Location = new System.Drawing.Point(49, 391);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 25);
             this.label4.TabIndex = 7;
@@ -113,7 +113,7 @@ namespace Test_SQL_ConnectV3
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(204, 219);
+            this.txtCity.Location = new System.Drawing.Point(204, 385);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(212, 31);
             this.txtCity.TabIndex = 8;
@@ -121,7 +121,7 @@ namespace Test_SQL_ConnectV3
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 276);
+            this.label5.Location = new System.Drawing.Point(49, 444);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 25);
             this.label5.TabIndex = 9;
@@ -129,7 +129,7 @@ namespace Test_SQL_ConnectV3
             // 
             // txtStateProvinceID
             // 
-            this.txtStateProvinceID.Location = new System.Drawing.Point(204, 276);
+            this.txtStateProvinceID.Location = new System.Drawing.Point(204, 438);
             this.txtStateProvinceID.Name = "txtStateProvinceID";
             this.txtStateProvinceID.Size = new System.Drawing.Size(65, 31);
             this.txtStateProvinceID.TabIndex = 10;
@@ -137,7 +137,7 @@ namespace Test_SQL_ConnectV3
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(49, 338);
+            this.label6.Location = new System.Drawing.Point(49, 504);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 25);
             this.label6.TabIndex = 11;
@@ -145,7 +145,7 @@ namespace Test_SQL_ConnectV3
             // 
             // txtPostCode
             // 
-            this.txtPostCode.Location = new System.Drawing.Point(204, 338);
+            this.txtPostCode.Location = new System.Drawing.Point(204, 498);
             this.txtPostCode.Name = "txtPostCode";
             this.txtPostCode.Size = new System.Drawing.Size(146, 31);
             this.txtPostCode.TabIndex = 12;
