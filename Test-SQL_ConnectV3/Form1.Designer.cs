@@ -65,7 +65,7 @@ namespace Test_SQL_ConnectV3
             // 
             // txtAddressID
             // 
-            this.txtAddressID.Location = new System.Drawing.Point(204, 216);
+            this.txtAddressID.Location = new System.Drawing.Point(204, 222);
             this.txtAddressID.Name = "txtAddressID";
             this.txtAddressID.Size = new System.Drawing.Size(212, 31);
             this.txtAddressID.TabIndex = 2;
