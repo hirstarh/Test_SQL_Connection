@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Test_SQL_ConnectV3
 {
-    public partial class Form1 : Form
+    public partial class txtAddress2 : Form
     {
         int ErrorCode;
-        public Form1()
+        public txtAddress2()
         {
             InitializeComponent();
             
@@ -27,7 +27,7 @@ namespace Test_SQL_ConnectV3
             SqlCommand command;
             SqlDataReader dataReader;
             SqlDataAdapter adapter = new SqlDataAdapter();
-            String sql, sql_Insert, Output = "";
+            String sql, sql_Insert,sql_Update, sql_Delete, Output = "";
 
             /* SQL Server IP address 45.76.138.73 */
             try
@@ -36,10 +36,12 @@ namespace Test_SQL_ConnectV3
                 connectionString = @"Data Source=agem-se1.agem-bisenhs.org.uk;Initial Catalog =AdventureWorks2019;User ID=AHirst;Password=Coniston125";
                 sql = " Select TOP (20) AddressID, AddressLine1, City, StateProvinceID, PostalCode From [AdventureWorks2019].[Person].[Address] ";
                 sql_Insert = "Insert into [AdventureWorks2019].[Person].[Address] (AddressLine1, City, StateProvinceID, PostalCode) values('950 Mill Lane', 'Steyning', 45, 'BN44 3LN') ";
+                sql_Update = "Update [AdventureWorks2019].[Person].[Address] set AddressLine1='330 Mill Lane' where AddressID=32523";
+                sql_Delete = "Delete [AdventureWorks2019].[Person].[Address] where AddressID=32522";
                 cnn = new SqlConnection(connectionString);
                 cnn.Open();
-                adapter.InsertCommand = new SqlCommand(sql_Insert, cnn);
-                adapter.InsertCommand.ExecuteNonQuery();
+                adapter.DeleteCommand = new SqlCommand(sql_Delete, cnn);
+                adapter.DeleteCommand.ExecuteNonQuery();
 
                 command = new SqlCommand(sql, cnn);
                 dataReader = command.ExecuteReader();
@@ -64,5 +66,7 @@ namespace Test_SQL_ConnectV3
 
             }
         }
+
+        
     }
 }
